@@ -1,0 +1,120 @@
+
+Update the First4Fitness Telegram bot exam system.
+
+GOAL:
+Create a Comprehensive Exam Mode (الاختبار الشامل) for certification.
+
+====================================
+1. COMPREHENSIVE EXAM MODE
+====================================
+
+Add a new main menu button:
+
+🎓 الاختبار الشامل
+
+When user presses it:
+
+DO NOT ask for topic selection.
+
+Start exam immediately.
+
+====================================
+2. EXAM STRUCTURE
+====================================
+
+The comprehensive exam must contain exactly 30 questions.
+
+Question distribution:
+
+- 10 questions from التشريح الرياضي
+- 10 questions from التشريح الوظيفي
+- 10 questions from الفسيولوجيا الرياضية
+
+Total = 30
+
+Important:
+
+Questions must be mixed randomly.
+
+Example:
+Q1 anatomy
+Q2 physiology
+Q3 functional anatomy
+Q4 anatomy
+...
+
+Do NOT group by topic.
+
+====================================
+3. CERTIFICATE ELIGIBILITY
+====================================
+
+This exam is the ONLY exam that grants a certificate.
+
+Certificate rule:
+
+If final score >= 80%
+
+Generate and send PDF certificate.
+
+If score < 80%
+
+Show:
+"لم تحقق نسبة النجاح المطلوبة للحصول على الشهادة"
+
+No certificate.
+
+====================================
+4. EXAM RULES
+====================================
+
+During comprehensive exam:
+
+- No retry allowed
+- No explanation after each question
+- No topic switching
+- No repeating questions in same exam
+
+Store:
+
+- exam progress
+- current question number
+- correct answers
+- wrong answers
+
+====================================
+5. FINAL RESULTS
+====================================
+
+After question 30:
+
+Show final report:
+
+📊 نتيجة الاختبار الشامل
+
+عدد الإجابات الصحيحة: X
+عدد الإجابات الخاطئة: Y
+النسبة: Z%
+
+If passed:
+🎓 تم إصدار شهادتك بنجاح
+
+If failed:
+❌ لم تحقق نسبة النجاح المطلوبة
+
+====================================
+6. SAFETY
+====================================
+
+If topic has insufficient questions:
+Fill from unused questions in same topic.
+
+Never crash.
+
+Validate every question before sending.
+
+====================================
+GOAL
+====================================
+
+Build a professional certification exam system based on a mixed 30-question comprehensive exam across all three sports science topics.
