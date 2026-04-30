@@ -1,0 +1,121 @@
+
+Upgrade the First4Fitness Telegram bot question system.
+
+GOAL:
+Expand the question bank to 300 total questions and prevent repetition during a user session.
+
+====================================
+1. EXPAND QUESTION BANK
+====================================
+
+Increase questions.json to:
+
+- 100 questions for "التشريح الرياضي"
+- 100 questions for "التشريح الوظيفي"
+- 100 questions for "الفسيولوجيا الرياضية"
+
+TOTAL = 300 questions
+
+Rules:
+
+- All questions must be written in Arabic
+- Muscle names and bone names must remain in English in parentheses where needed
+- Each question must have:
+  - id
+  - topic
+  - question
+  - options (4)
+  - correct
+  - explanation
+
+Quality requirements:
+
+- Scientifically accurate
+- Clear wording
+- No duplicate concepts
+- No repeated exact questions
+- Balanced coverage inside each topic
+
+Examples of internal coverage:
+
+التشريح الرياضي:
+- Bones
+- Muscles
+- Joints
+- Ligaments
+- Tendons
+
+التشريح الوظيفي:
+- Planes of motion
+- Movement analysis
+- Agonist / antagonist
+- Lever systems
+- Kinetic chain
+
+الفسيولوجيا الرياضية:
+- Energy systems
+- VO2 max
+- Heart adaptation
+- Hormones
+- Recovery
+- Fatigue
+
+====================================
+2. NO QUESTION REPETITION PER SESSION
+====================================
+
+Important:
+
+During the same user session:
+
+- Do NOT repeat any question already shown
+- Keep track of session question history
+- Only show unused questions
+
+Allowed exception:
+If user presses:
+"🔁 إعادة المحاولة"
+
+Then resend the same question only.
+
+Otherwise:
+Never repeat.
+
+====================================
+3. SESSION MANAGEMENT
+====================================
+
+Track per user:
+
+- active topic
+- asked questions list
+- score
+- retry state
+
+When all questions in topic are exhausted:
+
+Show:
+"لقد أنهيت جميع أسئلة هذا المجال 🎉"
+
+Then suggest another topic.
+
+====================================
+4. SAFETY CHECKS
+====================================
+
+Before sending any question:
+
+- Verify question exists
+- Verify options count = 4
+- Verify correct answer exists inside options
+
+If invalid:
+Skip question.
+
+Bot must never crash.
+
+====================================
+GOAL
+====================================
+
+Transform the bot into a large educational quiz system with 300 high-quality questions and zero repetition inside the same learning session.

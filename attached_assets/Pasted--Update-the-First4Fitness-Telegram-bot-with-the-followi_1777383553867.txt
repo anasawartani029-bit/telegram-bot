@@ -1,0 +1,104 @@
+
+Update the First4Fitness Telegram bot with the following features and branding.
+
+BOT INFO:
+- Telegram bot
+- Admin Telegram ID: 8140559853
+- Bot token comes from environment variable BOT_TOKEN
+
+---
+
+1. LANGUAGE RULE:
+- All bot interface must be in Arabic
+- BUT anatomical terms (muscles, bones, joints) MUST always appear in English inside the text
+
+Example:
+"العضلة ذات الرأسين (Biceps Brachii)"
+"عظم الفخذ (Femur)"
+
+---
+
+2. QUIZ SYSTEM:
+- Keep topic-based system:
+  - التشريح الرياضي
+  - التشريح الوظيفي
+  - الفسيولوجيا الرياضية
+- Questions are loaded only from local file questions.json
+- No AI, no external APIs
+
+---
+
+3. /start MENU:
+
+Show buttons:
+
+- التشريح الرياضي
+- التشريح الوظيفي
+- الفسيولوجيا الرياضية
+- من نحن
+
+---
+
+4. ABOUT SECTION ("من نحن"):
+
+When user clicks it:
+
+Show a formatted message:
+
+TITLE:
+📌 First4Fitness
+
+DESCRIPTION (Arabic):
+"First4Fitness هي قناة تعليمية متخصصة في شرح مواد التربية البدنية وعلوم الرياضة، 
+يتم تقديم المحتوى من خلال مدربين ومعلمين معتمدين في مجالات:
+- التشريح الرياضي
+- الفسيولوجيا الرياضية
+- التدريب الرياضي
+- العلوم الحركية"
+
+ADD:
+
+YouTube Link:
+https://www.youtube.com/@First4_Fitness
+
+SHOW LOGO IMAGE:
+- Display image file named logo.png from local project files
+
+FORMAT:
+1. Logo image at top
+2. Description text
+3. YouTube link at bottom
+
+---
+
+5. QUIZ FLOW:
+- User selects topic first
+- Bot filters questions based on topic
+- Inline buttons for answers
+- Response:
+  - Correct: "إجابة صحيحة ✅"
+  - Wrong: "إجابة خاطئة ❌" + show correct answer
+
+---
+
+6. SCORE SYSTEM:
+- Track user score locally
+- /score shows:
+  - عدد الإجابات الصحيحة
+  - عدد الإجابات الكلية
+  - نسبة النجاح
+
+---
+
+7. TECH RULES:
+- No external APIs
+- No YouTube scraping
+- No PDF processing
+- Only local files:
+  - questions.json
+  - logo.png
+
+---
+
+GOAL:
+Turn the bot into a professional Arabic educational platform with English anatomical terminology integration and full First4Fitness branding.
